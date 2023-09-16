@@ -1126,14 +1126,14 @@ body,.mainWrapper {
     line-height: 150%
 }
 
-#localGuideColumnLeft .poiContentWrapper {
+#localGuideColumnLeft .poiContentWrapper, .safetySummaryInfoWrapper {
     border: 1px solid #bfbfbf;
     border-radius: 5px;
     padding: .05rem 1rem;
     margin-bottom: 1rem
 }
 
-#localGuideColumnLeft .poiContentWrapper h3 {
+#localGuideColumnLeft .poiContentWrapper h3, .safetySummaryInfoWrapper h3 {
     font-size: 1.125rem;
     font-family: "CostarBrownRegular",sans-serif;
     line-height: 150%;
@@ -1254,6 +1254,10 @@ body,.mainWrapper {
     }
 }
 
+.safetyContainer, .safetySummaryInfoWrapper {
+    text-align: center;
+}
+
 .schoolsWrapper {
     margin-bottom: 1rem
 }
@@ -1342,7 +1346,7 @@ body,.mainWrapper {
     margin-right: .5rem
 }
 
-#schoolsSection .schoolsContainer {
+#schoolsSection .schoolsContainer, .safetyContainer {
     display: grid;
     column-gap: 1.5rem;
     row-gap: 1.5rem;
@@ -1351,18 +1355,18 @@ body,.mainWrapper {
 }
 
 @media(max-width: 1392px) {
-    #schoolsSection .schoolsContainer {
+    #schoolsSection .schoolsContainer, .safetyContainer {
         grid-template-columns:repeat(2,1fr)
     }
 }
 
 @media(max-width: 1080px) {
-    #schoolsSection .schoolsContainer {
+    #schoolsSection .schoolsContainer, .safetyContainer {
         grid-template-columns:repeat(1,1fr)
     }
 }
 
-#schoolsSection .schoolCard {
+#schoolsSection .schoolCard, .safetyCard {
     display: block;
     border: 1px solid #cacaca;
     border-radius: 4px;

@@ -1,5 +1,6 @@
-// import logo from './logo.svg';
-// import './App.css';
+import { useState } from "react";
+import axios from 'axios';
+
 import Header from './Header';
 import Footer from './Footer';
 import ColumnRight from './ColumnRight';
@@ -11,26 +12,11 @@ import PointsOfInterest from './PointsOfInterest';
 import TopLocations from './TopLocations';
 import Nearby from './Nearby';
 import SummaryBottom from './SummaryBottom';
+import Safety from './Safety';
 
 function App() {
-  // return (
-  //   <div className="App">
-  //     <header className="App-header">
-  //       <img src={logo} className="App-logo" alt="logo" />
-  //       <p>
-  //         Edit <code>src/App.js</code> and save to reload.
-  //       </p>
-  //       <a
-  //         className="App-link"
-  //         href="https://reactjs.org"
-  //         target="_blank"
-  //         rel="noopener noreferrer"
-  //       >
-  //         Learn React
-  //       </a>
-  //     </header>
-  //   </div>
-  // );
+  const [grades, setGrades] = useState(['A', 'B', 'C', 'D']);
+
   return (
     <div class="mainWrapper ">
 
@@ -40,12 +26,7 @@ function App() {
         <section id="localGuideContentWrapper">
     
                 <section class="hero" id="heroSection">
-    
-    
-    
-    
-    
-    
+
     <header class="heroImage" id="localGuideHeader">
         <div id="headingWrapper" class="headingWrapper">
             <h2>Blacksburg</h2>
@@ -68,6 +49,8 @@ function App() {
                         <Transportation />
     
                         <Schools />
+
+                        <Safety grades={grades} />
 
                         <PointsOfInterest />
     
